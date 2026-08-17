@@ -19,7 +19,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 *(If you haven't already downloaded or cloned the project folder)*
 ```bash
 git clone <your-repository-url>
-cd Assignment
+cd biosync-landingpage
 ```
 
 ### 2. Install dependencies
