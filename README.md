@@ -1,32 +1,57 @@
-# React + TypeScript + Vite
+# BioSync
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A next-generation biotechnology synthesis landing page built with React, Vite, and Three.js. This project showcases a modern, high-performance web interface featuring 3D rendering and scroll-driven animations.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Interactive 3D Hero Section**: Features a 3D particle DNA double helix built with Three.js and React Three Fiber. **You can interact with it by clicking and dragging on the Hero section to rotate the 3D animation!**
+- **Scroll Animations**: Smooth, high-performance scroll triggers powered by GSAP.
+- **Modern UI**: Styled beautifully with Tailwind CSS v4 and Framer Motion for micro-interactions.
+- **Optimized Performance**: Components are code-split using `React.lazy()` for lightning-fast initial load times.
+- **Type-Safe**: Written entirely in TypeScript.
 
-## React Compiler
+## 🚀 Setup Instructions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+### 1. Clone the repository
+*(If you haven't already downloaded or cloned the project folder)*
+```bash
+git clone <your-repository-url>
+cd Assignment
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 2. Install dependencies
+Run the following command to install all required libraries (React, Three.js, GSAP, etc.):
+```bash
+npm install
+```
+
+### 3. Run the Development Server
+Start the local Vite development server:
+```bash
+npm run dev
+```
+Once it's running, open your browser and navigate to `http://localhost:5173` to view the website!
+
+### 4. Build for Production
+To create an optimized, minified production build:
+```bash
+npm run build
+```
+The output will be generated in the `dist` folder. You can preview this build locally by running:
+```bash
+npm run preview
+```
+
+## 🛠️ Tech Stack
+
+- **Framework**: React 19 + Vite
+- **Styling**: Tailwind CSS v4
+- **3D Rendering**: Three.js, @react-three/fiber, @react-three/drei
+- **Animations**: GSAP, Framer Motion
+- **Icons**: Lucide React
+
+---
+*Built with modern web standards for optimal performance and user experience.*
