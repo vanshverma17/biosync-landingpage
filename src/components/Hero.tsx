@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
-import { ThreeCanvas } from './ThreeCanvas';
+import { Suspense, lazy } from 'react';
 import { ChevronRight, Dna } from 'lucide-react';
+
+const ThreeCanvas = lazy(() => import('./ThreeCanvas').then(m => ({ default: m.ThreeCanvas })));
 
 export const Hero = () => {
   return (
@@ -17,7 +19,9 @@ export const Hero = () => {
           WebkitMaskImage: 'linear-gradient(to bottom, black 55%, transparent 90%)'
         }}
       >
-        <ThreeCanvas />
+        <Suspense fallback={null}>
+          <ThreeCanvas />
+        </Suspense>
       </div>
       {/* Radial glow — also masked so it doesn't produce a hard bottom edge */}
       <div 
